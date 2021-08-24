@@ -1,0 +1,13 @@
+---
+
+- apt:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - keepassxc
+    - apt-transport-https
+    - nano
+    - zsh
+    - git
+    - curl
+    - openjdk-16-jdk
