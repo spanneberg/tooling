@@ -1,0 +1,18 @@
+---
+
+- apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    filename: docker
+    state: present
+
+- apt: 
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io

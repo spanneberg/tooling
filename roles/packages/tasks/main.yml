@@ -11,3 +11,6 @@
     - git
     - curl
     - openjdk-16-jdk
+    - ca-certificates
+    - lsb-release
+    - gnupg
